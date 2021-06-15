@@ -1,4 +1,4 @@
-const path = require("path");
+  const path = require("path");
 
 const {camelCase} = require("camel-case");
 
@@ -12,10 +12,20 @@ const name = camelCase(pkg.name);
 const exposes = {
   "./utils/log-hello": "./src/utils/log-hello.js",
   "./utils/version": "./src/utils/version.js",
-  "./google-analytics": "./src/ga.js"
+  "./google-analytics": "./src/ga.js",
+  "./facebook": "./src/fbq.js"
 };
 
 const asyncExternals = {
+  fbq:`promise new Promise((resolve)=>{!function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.onload = function(){resolve(window.fbq)}
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');})`,
   'google-analytics': `promise new Promise((resolve) => {
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
