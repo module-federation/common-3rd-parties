@@ -1,6 +1,6 @@
 {
   "name": "@module-federation/commmon-3rd-libs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/node/remote-entry.js",
   "browser": "dist/browser/remote-entry.js",
