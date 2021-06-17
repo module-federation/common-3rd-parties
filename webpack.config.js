@@ -13,10 +13,12 @@ const exposes = {
   "./utils/log-hello": "./src/utils/log-hello.js",
   "./utils/version": "./src/utils/version.js",
   "./google-analytics": "./src/ga.js",
-  "./facebook": "./src/fbq.js"
+  "./facebook": "./src/fbq.js",
+  "./bing": "./src/bing.js",
 };
 
 const asyncExternals = {
+  bing: 'UET@https://bat.bing.com/bat.js',
   fbq:`promise new Promise((resolve)=>{!function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -55,6 +57,7 @@ const browserConfig = {
   output: {
     path: path.resolve("./dist/browser"),
   },
+  externalsType: "script",
   externals: asyncExternals,
   plugins: [
     new webpack.container.ModuleFederationPlugin({
