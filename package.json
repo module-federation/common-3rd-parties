@@ -1,8 +1,9 @@
 {
   "name": "@module-federation/commmon-3rd-libs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "main": "dist/node/remote-entry.js",
+  "main": "dist/browser/remote-entry.js",
+  "unpkg": "dist/browser/remote-entry.js",
   "browser": "dist/browser/remote-entry.js",
   "files": [
     "dist"
