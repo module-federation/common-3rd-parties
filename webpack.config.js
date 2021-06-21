@@ -56,6 +56,7 @@ const baseConfig = {
 const browserConfig = {
   output: {
     path: path.resolve("./dist/browser"),
+    publicPath: 'auto'
   },
   externalsType: "script",
   externals: asyncExternals,

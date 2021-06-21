@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "webpack",
-    "serve": "serve dist -p 3100"
+    "serve": "serve dist -p 3100",
+    "prepublish": "yarn build"
   },
   "keywords": [],
   "author": "",
