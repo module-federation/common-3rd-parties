@@ -1,5 +1,5 @@
 {
-  "name": "@module-federation/commmon-3rd-libs",
+  "name": "@module-federation/common-3rd-libs",
   "version": "0.0.3",
   "description": "",
   "main": "dist/browser/remote-entry.js",
