@@ -1,8 +1,10 @@
 # common-3rd-parties
 Common Third party scripts provided as federated modules
 
-
 Allows for importing of third parties via module federation 
+
+This is shipped to unpkg and can be consumed at the latest version
+https://unpkg.com/browse/@module-federation/common-3rd-libs/dist/browser/
 
 ## Configuring the consumer
 ```js
